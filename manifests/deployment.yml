@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: rajatspipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rajatspipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: rajatspipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: rajatspipelinesjavascriptdocker 
+          image: acrtestrajat.azurecr.io/rajatspipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
